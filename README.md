@@ -1,12 +1,8 @@
 # Fuzzy_Controlled_Rover
 Self-driving rover that follows a car (with specific license plate number) and maintains a constant distance between the later using fuzzy control
 
-<img
-src=“images/rover.jpg”
-raw=true
-alt=“Subject Pronouns”
-style=“margin-right: 10px;”
-/>
+![alt text](https://github.com/daniazzam/Fuzzy_Controlled_Rover/blob/main/images/rover.jpg?raw=true)
+
 
 Description
 The designed mechatronic system consists of a car-following rover that aims to follow a nearby
@@ -18,12 +14,8 @@ of detecting and registering the car’s license plate using a convolutional neu
 
 
 Hardware Connections
-<img
-src=“images/ciruits.jpg”
-raw=true
-alt=“Subject Pronouns”
-style=“margin-right: 10px;”
-/>
+
+![alt text](https://github.com/daniazzam/Fuzzy_Controlled_Rover/blob/main/images/ciruit.jpg?raw=true)
 
 Features
 The implemented features include:

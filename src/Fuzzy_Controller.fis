@@ -1,0 +1,105 @@
+[System]
+Name='Fuzzy controller'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=2
+NumRules=33
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='right_sensor_D1'
+Range=[-50 150]
+NumMFs=5
+MF1='SPE':'trimf',[0 0 15]
+MF2='MPE':'trimf',[5 25 45]
+MF3='SNE':'trimf',[-15 0 0]
+MF4='LNE':'trapmf',[-50 -50 -30 -5]
+MF5='LPE':'trapmf',[30 60 150 150]
+
+[Input2]
+Name='left_sensor_D2'
+Range=[-50 150]
+NumMFs=5
+MF1='SPE':'trimf',[0 0 15]
+MF2='MPE':'trimf',[5 25 45]
+MF3='SNE':'trimf',[-15 0 0]
+MF4='LNE':'trapmf',[-50 -50 -30 -5]
+MF5='LPE':'trapmf',[30 60 150 150]
+
+[Input3]
+Name='Difference'
+Range=[-40 40]
+NumMFs=3
+MF1='PE':'trapmf',[0 5 40 40]
+MF2='ZE':'trimf',[0 0 0]
+MF3='NE':'trapmf',[-40 -40 -5 0]
+
+[Output1]
+Name='right_motors'
+Range=[-10 10]
+NumMFs=10
+MF1='SSRI':'trimf',[0 0 2]
+MF2='MRI':'trimf',[4.25 6.2 8]
+MF3='SRI':'trimf',[1 2.5 4]
+MF4='SMRI':'trimf',[2.5 4.25 6]
+MF5='SLRI':'trimf',[6.2 7.6 9]
+MF6='LRI':'trapmf',[7.6 9 10 10]
+MF7='SSRD':'trimf',[-2.5 0 0]
+MF8='SRD':'trimf',[-5 -3.25 -1.5]
+MF9='SLRD':'trimf',[-8 -5.6 -3.25]
+MF10='LRD':'trapmf',[-10 -10 -8 -5.6]
+
+[Output2]
+Name='left_motors'
+Range=[-10 10]
+NumMFs=10
+MF1='SSLI':'trimf',[0 0 2]
+MF2='SLI':'trimf',[1 2.5 4]
+MF3='SMLI':'trimf',[2.5 4.25 6]
+MF4='MLI':'trimf',[4.25 6.2 8]
+MF5='SLLI':'trimf',[6.2 7.6 9]
+MF6='SLD':'trimf',[-5 -3.25 -1.5]
+MF7='SLLD':'trimf',[-8 -5.6 -3.25]
+MF8='LLI':'trapmf',[7.6 9 10 10]
+MF9='LLD':'trapmf',[-10 -10 -8 -5.6]
+MF10='SSLD':'trimf',[-2.5 0 0]
+
+[Rules]
+1 1 1, 1 2 (1) : 1
+3 1 1, 8 2 (1) : 1
+4 1 1, 10 2 (1) : 1
+1 2 1, 1 4 (1) : 1
+2 2 1, 4 4 (1) : 1
+3 2 1, 8 4 (1) : 1
+4 2 1, 10 4 (1) : 1
+1 5 1, 3 8 (1) : 1
+2 5 1, 2 8 (1) : 1
+5 5 1, 5 8 (1) : 1
+3 5 1, 8 8 (1) : 1
+4 5 1, 10 8 (1) : 1
+3 3 1, 7 6 (1) : 1
+4 3 1, 10 6 (1) : 1
+4 4 1, 9 9 (1) : 1
+1 1 3, 3 1 (1) : 1
+2 1 3, 2 2 (1) : 1
+5 1 3, 6 2 (1) : 1
+2 2 3, 2 3 (1) : 1
+5 2 3, 6 4 (1) : 1
+5 5 3, 6 5 (1) : 1
+2 3 3, 2 6 (1) : 1
+5 3 3, 6 9 (1) : 1
+3 3 3, 8 10 (1) : 1
+2 4 3, 2 9 (1) : 1
+5 4 3, 6 9 (1) : 1
+3 4 3, 8 9 (1) : 1
+4 4 3, 10 7 (1) : 1
+1 1 2, 3 2 (1) : 1
+2 2 2, 2 4 (1) : 1
+5 5 2, 6 8 (1) : 1
+3 3 2, 8 6 (1) : 1
+4 4 2, 10 9 (1) : 1

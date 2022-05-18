@@ -1,8 +1,12 @@
 # Fuzzy_Controlled_Rover
 Self-driving rover that follows a car (with specific license plate number) and maintains a constant distance between the later using fuzzy control
 
-Head-Controlled Rover
-Rover
+<img
+src=“images/rover.jpg”
+raw=true
+alt=“Subject Pronouns”
+style=“margin-right: 10px;”
+/>
 
 Description
 The designed mechatronic system consists of a car-following rover that aims to follow a nearby
@@ -14,7 +18,12 @@ of detecting and registering the car’s license plate using a convolutional neu
 
 
 Hardware Connections
-Hardware Circuit
+<img
+src=“images/ciruits.jpg”
+raw=true
+alt=“Subject Pronouns”
+style=“margin-right: 10px;”
+/>
 
 Features
 The implemented features include:
